@@ -60,6 +60,8 @@ Ruta za dohvat može izgledati kao nešto nalik ovome: `/items?name=RTX&priceFro
 
 Potrebno je riješiti razne slučajeve, svaki slučaj staviti u posebnu datoteku proizvoljnog imena i exportati u glavnu datoteku `main.js` gdje će se importati i koristiti
 
+**Napomena**: Koristiti `import` i `export` [statemente](https://stackoverflow.com/questions/45854169/how-can-i-use-an-es6-import-in-node-js).
+
 - Napisati funkciju koja će grupirati popis objekata po određenom polju, npr.
 
 ```javascript
