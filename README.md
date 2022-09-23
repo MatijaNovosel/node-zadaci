@@ -3,7 +3,7 @@
 
 ## Opis
 
-Svaki zadatak radi se na posebnom branchu istog imena kao i direktorij unutar kojeg se nalazi zadatak npr. ako je direktorij imena 1-zadatak to je ujedno i ime brancha.
+Svaki zadatak radi se na posebnom branchu istog imena kao i direktorij unutar kojeg se nalazi zadatak npr. ako je direktorij imena `1-zadatak` to je ujedno i ime brancha.
 
 Unutar svakog direktorija ponovo se radi novi projekt s `npm init` proizvoljnih informacija prilikom setupa ali po mogućnosti nešto nalik na temu zadatka.
 
