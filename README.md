@@ -7,8 +7,6 @@ Svaki zadatak radi se na posebnom branchu istog imena kao i direktorij unutar ko
 
 Unutar svakog direktorija ponovo se radi novi projekt s `npm init` proizvoljnih informacija prilikom setupa ali po mogućnosti nešto nalik na temu zadatka.
 
-Typescript se neće koristiti.
-
 ## Zadatak 1 - REST API
 
 Potrebno je napraviti REST API uz pomoć [Expressa](https://github.com/expressjs/express). U cijelosti radi se o backend sustavu informatičkog dućana.
@@ -55,6 +53,8 @@ Ruta za dohvat može izgledati kao nešto nalik ovome: `/items?name=RTX&priceFro
   - **POST** `/auth/login` - Prijava korisnika koja vraća natrag JWT token, unutar JWT tokena pospremiti samo ID korisnika
   - **POST** `/auth/register` - Registracija korisnika s dva parametra: `email` i `password`, potrebno je vratiti poruku greške ako korisnik postoji u bazi, a lozinku kriptirati uz pomoć `bcrypt`
   - Rute koje nisu dohvaćene `GET` metodom potrebno je zaštiti na način da se request odbija i vraća poruka greške statusnog koda `401`, autentifikacijski dio šalje se preko [`Authorization Bearer`](https://stackoverflow.com/questions/22229996/basic-http-and-bearer-token-authentication) HTTP headera
+  
+- Dodati Typescript support na projekt
 
 ## Zadatak 2 - Razno
 
