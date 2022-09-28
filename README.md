@@ -7,6 +7,8 @@ Svaki zadatak radi se na posebnom branchu istog imena kao i direktorij unutar ko
 
 Unutar svakog direktorija ponovo se radi novi projekt s `npm init` proizvoljnih informacija prilikom setupa ali po mogućnosti nešto nalik na temu zadatka.
 
+**Napomena**: S obzirom da je više ljudi na repozitoriju, imena brancheva moraju zapocinjati s imenom korisnika pa zatim onako kako je opisano prije, npr. `{korisnik}/{ime-brancha}` tj. `dado/1-rest-api`.
+
 ## Zadatak 1 - REST API
 
 Potrebno je napraviti REST API uz pomoć [Expressa](https://github.com/expressjs/express). U cijelosti radi se o backend sustavu informatičkog dućana.
@@ -79,13 +81,9 @@ Serverska strana mora isčekivati određene događaje od strane klijenata i reag
 
 Klijent, kao što je rečeno prije, može se spojiti na server i slati naredbe te isčekivati odgovor natrag od servera. Klijentsku stranu napraviti proizvoljno, ali omogućiti te funkcionalnosti.
 
-## Zadatak 3 - Razno
+## Zadatak 3 - Group
 
-Potrebno je riješiti razne slučajeve, svaki slučaj staviti u posebnu datoteku proizvoljnog imena i exportati u glavnu datoteku `main.js` gdje će se importati i koristiti
-
-**Napomena**: Koristiti `import` i `export` [statemente](https://stackoverflow.com/questions/45854169/how-can-i-use-an-es6-import-in-node-js).
-
-- Napisati funkciju koja će grupirati popis objekata po određenom polju, npr.
+Napisati funkciju koja će grupirati popis objekata po određenom polju, npr.
 
 ```javascript
 const employees = [
@@ -135,14 +133,34 @@ Ovo polje grupira se po polju "company":
 }
 ```
 
-- Napisati funkciju koja će iz popisa objekata vratiti to isto polje bez duplikata, duplikat se smatra objekt sa svim istim imenima polja i vrijednostima polja
-- Pronaći 3 besplatna API-a po izboru i isčekati istovremeno sve pozive uz pomoć `Promise.all` funkcije, nakon što se sve dohvati ispisati sve rezultate
-- Napisati funkciju koja će parsirati URL predan u parametru, tj. koja će vraćati domenu, query parametre i sve dijelove URL-a u obliku objekata
-- Napisati program koji će primiti samo jedan input argument (putanja na disku) i ispisati sve datoteke u tom direktoriju, npr. `program.js "C:/Users"`
-- Napisati program koji će primiti beskonačno mnogo putanji do datoteka na disku i od njih stvoriti zippanu datoteku imena jednakom današnjem datumu u ISO formatu, npr. `program.js "./text.txt" "../test.json"`
-- Napisati program koji će poslati mail preko SMTP protokola na GMAIL adresu, proizvoljnog sadržaja
-- Napisati program koji će ispisati lokalnu IP adresu računala
+## Zadatak 4 - Duplikati
 
-## Zadatak 4 - Color average
+Napisati funkciju koja će iz popisa objekata vratiti to isto polje bez duplikata, duplikat se smatra objekt sa svim istim imenima polja i vrijednostima polja.
+
+## Zadatak 5 - Promise.all
+
+Pronaći 3 besplatna API-a po izboru i isčekati istovremeno sve pozive uz pomoć `Promise.all` funkcije, nakon što se sve dohvati ispisati sve rezultate.
+
+## Zadatak 6 - Parsanje URL-a
+
+Napisati funkciju koja će parsirati URL predan u parametru, tj. koja će vraćati domenu, query parametre i sve dijelove URL-a u obliku objekata.
+
+## Zadatak 7 - ls
+
+Napisati program koji će primiti samo jedan input argument (putanja na disku) i ispisati sve datoteke u tom direktoriju, npr. `program.js "C:/Users"`.
+
+## Zadatak 8 - Zippanje
+
+Napisati program koji će primiti beskonačno mnogo putanji do datoteka na disku i od njih stvoriti zippanu datoteku imena jednakom današnjem datumu u ISO formatu, npr. `program.js "./text.txt" "../test.json"`.
+
+## Zadatak 9 - Slanje maila
+
+Napisati program koji će poslati mail preko SMTP protokola na GMAIL adresu, proizvoljnog sadržaja.
+
+## Zadatak 10 - IP
+
+Napisati program koji će ispisati lokalnu IP adresu računala.
+
+## Zadatak 11 - Color average
 
 Potrebno je napraviti program koji će primiti sliku sa datotečnog sistema kao parametar i izračunati srednju vrijednost boja te slike, izraženo u HEX formatu.
