@@ -53,10 +53,33 @@ Ruta za dohvat može izgledati kao nešto nalik ovome: `/items?name=RTX&priceFro
   - **POST** `/auth/login` - Prijava korisnika koja vraća natrag JWT token, unutar JWT tokena pospremiti samo ID korisnika
   - **POST** `/auth/register` - Registracija korisnika s dva parametra: `email` i `password`, potrebno je vratiti poruku greške ako korisnik postoji u bazi, a lozinku kriptirati uz pomoć `bcrypt`
   - Rute koje nisu dohvaćene `GET` metodom potrebno je zaštiti na način da se request odbija i vraća poruka greške statusnog koda `401`, autentifikacijski dio šalje se preko [`Authorization Bearer`](https://stackoverflow.com/questions/22229996/basic-http-and-bearer-token-authentication) HTTP headera
-  
 - Dodati Typescript support na projekt
 
-## Zadatak 2 - Razno
+## Zadatak 2 - Socket MMO
+
+Cilj zadatka je napraviti MMO u konzoli koristeći [socket.io](https://socket.io/), što znači da je potrebno napraviti i serversku i klijentsku stranu igre. Preporuča se koristiti i [Express](https://github.com/expressjs/express) uz njega.
+
+Opća pravila igre:
+
+- Server drži na globalnoj razini `MxN` matricu stringova koja označava svijet unutar kojeg se mogu kretati korisnici, unutar te matrice postoji par vrsta polja:
+  - `X`, objekt preko kojeg se ne može prijeći
+  - `~`, trava po kojoj se može hodati
+  - `O`, igrač kojime upravlja korisnik
+- Svi igrači na spajanju na socket se postavljaju na poziciju `(0, 0)` osim ako je već tamo netko
+- Korisnik može serveru poslati par naredbi:
+  - `go {direction}`, javlja serveru da se korisnik želi pokrenuti u jednom od 4 smjera, `up`, `down`, `left` ili `right`, na dohvatu naredbe ažurira se matrica
+  - `show`, prikazuje korisniku trenutačno stanje matrice sa servera
+  - `leave`, odspaja korisnika sa instance (nenasilno) i miče ga iz matrice
+
+### Serverska strana
+
+Serverska strana mora isčekivati određene događaje od strane klijenata i reagirati prikladno, ažurirajući matricu stanja.
+
+### Klijentska strana
+
+Klijent, kao što je rečeno prije, može se spojiti na server i slati naredbe te isčekivati odgovor natrag od servera. Klijentsku stranu napraviti proizvoljno, ali omogućiti te funkcionalnosti.
+
+## Zadatak 3 - Razno
 
 Potrebno je riješiti razne slučajeve, svaki slučaj staviti u posebnu datoteku proizvoljnog imena i exportati u glavnu datoteku `main.js` gdje će se importati i koristiti
 
