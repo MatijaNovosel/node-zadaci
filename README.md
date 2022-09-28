@@ -142,3 +142,7 @@ Ovo polje grupira se po polju "company":
 - Napisati program koji će primiti beskonačno mnogo putanji do datoteka na disku i od njih stvoriti zippanu datoteku imena jednakom današnjem datumu u ISO formatu, npr. `program.js "./text.txt" "../test.json"`
 - Napisati program koji će poslati mail preko SMTP protokola na GMAIL adresu, proizvoljnog sadržaja
 - Napisati program koji će ispisati lokalnu IP adresu računala
+
+## Zadatak 4 - Color average
+
+Potrebno je napraviti program koji će primiti sliku sa datotečnog sistema kao parametar i izračunati srednju vrijednost boja te slike, izraženo u HEX formatu.
